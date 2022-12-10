@@ -11,6 +11,8 @@
 
 // Exercise 1. Write a 'while' loop that prints the integers (whole numbers)
 // between 1 and 5 (inclusive).
+
+// starting position is 1
 let countTo5 = 1;
 while(countTo5 <= 5) {
     console.log(countTo5);
@@ -18,6 +20,8 @@ while(countTo5 <= 5) {
 }
 // Exercise 2. Write a 'do while' loop that prints the integers (whole numbers)
 // between 1 and 5 (inclusive).
+
+//reset starting position to 1
 countTo5 = 1;
 do {
     console.log(countTo5);
@@ -26,7 +30,7 @@ do {
 
 // Exercise 3. Write a 'for' loop that prints the integers (whole numbers)
 // between 1 and 5 (inclusive).
-for(let countTo5 = 1; countTo5 <= 5; countTo5++) {
+for(countTo5 = 1; countTo5 <= 5; countTo5++) {
     console.log(countTo5);
 }
 
@@ -35,6 +39,8 @@ for(let countTo5 = 1; countTo5 <= 5; countTo5++) {
 // writing loops in all 3 ways -- as a 'while', 'do while', and 'for' loop.
 
 // while loop
+
+// set start position to 10
 let countdownFrom10 = 10;
 while(countdownFrom10 != 0) {
     console.log(countdownFrom10);
@@ -42,13 +48,16 @@ while(countdownFrom10 != 0) {
 }
 
 // do while loop 
+
+// reset start position to 10
 countdownFrom10 = 10;
 do {
     console.log(countdownFrom10);
     countdownFrom10--;
 } while(countdownFrom10 != 0)
 
-// for loop 
+// for loop
+// reset start position to 10
 countdownFrom10 = 10;
 for(countdownFrom10; countdownFrom10 > 0; countdownFrom10--) {
     console.log(countdownFrom10);
@@ -58,6 +67,7 @@ for(countdownFrom10; countdownFrom10 > 0; countdownFrom10--) {
 // loop in all 3 ways -- as a 'while', 'do while', and 'for' loop.
 
 // while loop 
+// set start position to 7
 let countTo27 = 7;
 while(countTo27 <= 27) {
     console.log(countTo27);
@@ -65,6 +75,7 @@ while(countTo27 <= 27) {
 }
 
 //do while loop 
+// reset start position to 7
 countTo27 = 7;
 do {
     console.log(countTo27);
@@ -72,6 +83,7 @@ do {
 } while(countTo27 <= 27)
 
 // for loop 
+// reset start position to 7
 countTo27 = 7;
 for(countTo27; countTo27 <= 27; countTo27++) {
     console.log(countTo27);
@@ -81,6 +93,7 @@ for(countTo27; countTo27 <= 27; countTo27++) {
 // Write this loop in all 3 ways -- as a 'while', 'do while', and 'for' loop.
 
 //while loop 
+// set start position to 0
 let countBy10 = 0;
 while(countBy10 <= 100) {
     console.log(countBy10);
@@ -88,6 +101,7 @@ while(countBy10 <= 100) {
 }
 
 // do while loop 
+// reset start position to 0
 countBy10 = 0;
 do {
     console.log(countBy10);
@@ -95,6 +109,7 @@ do {
 } while(countBy10 <= 100)
 
 // for loop 
+// reset start position to 0
 countBy10 = 0;
 for(countBy10; countBy10 <= 100; countBy10+=10) {
     console.log(countBy10);
@@ -133,9 +148,11 @@ for(let i = 0; i <= favoriteNum; i++) {
 // (Hint - use an if statement in your loop)
 let favNum = 21;
 for(let i = 0; i <= 100; i++) {
+    // if i is not equal to favNum, print "not my favorite number"
     if(i != favNum) {
         console.log(i, " not my favorite number");
-    } else {
+    } else { 
+        // if i is equal to favNum, print "my favorite number!"
         console.log(i, " my favorite number!");
     }
 }
