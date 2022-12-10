@@ -58,22 +58,22 @@ for(countdownFrom10; countdownFrom10 > 0; countdownFrom10--) {
 // loop in all 3 ways -- as a 'while', 'do while', and 'for' loop.
 
 // while loop 
-let countTo27 = 8;
-while(countTo27 < 27) {
+let countTo27 = 7;
+while(countTo27 <= 27) {
     console.log(countTo27);
     countTo27++;
 }
 
 //do while loop 
-countTo27 = 8;
+countTo27 = 7;
 do {
     console.log(countTo27);
     countTo27++;
-} while(countTo27 < 27)
+} while(countTo27 <= 27)
 
 // for loop 
-countTo27 = 8;
-for(countTo27; countTo27 < 27; countTo27++) {
+countTo27 = 7;
+for(countTo27; countTo27 <= 27; countTo27++) {
     console.log(countTo27);
 }
 // Exercise 6. Write a loop that prints numbers between 0 and 100, counting by tens.
@@ -81,22 +81,22 @@ for(countTo27; countTo27 < 27; countTo27++) {
 // Write this loop in all 3 ways -- as a 'while', 'do while', and 'for' loop.
 
 //while loop 
-let countBy10 = 10;
-while(countBy10 < 100) {
+let countBy10 = 0;
+while(countBy10 <= 100) {
     console.log(countBy10);
     countBy10+=10;
 }
 
 // do while loop 
-countBy10 = 10;
+countBy10 = 0;
 do {
     console.log(countBy10);
     countBy10+=10;
-} while(countBy10 < 100)
+} while(countBy10 <= 100)
 
 // for loop 
-countBy10 = 10;
-for(countBy10; countBy10 < 100; countBy10+=10) {
+countBy10 = 0;
+for(countBy10; countBy10 <= 100; countBy10+=10) {
     console.log(countBy10);
 }
 // Exercise 7. Add a comment as to why the following loop is an infinite loop (will
