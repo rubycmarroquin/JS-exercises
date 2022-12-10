@@ -55,6 +55,7 @@ function exercise1(num1) {
     // ------------------------------------------
     // Write your code for exercise 1 below here:
     // ------------------------------------------
+    // if num1 is greater than 10, reassign answer1 to a new string
     if(num1 > 10) {
         answer1 = "The value of num1 is " + num1 + " and is greater than 10";
     }
@@ -104,11 +105,12 @@ function exercise1(num1) {
     // --------------------------------------------
     // Write your code for the exercise below here:
     // --------------------------------------------
+    // if num is > 0 assign "is positive" to answer3
     if(num3 > 0) {
         answer3 = num3 + " is positive";
-    } else if(num3 < 0) {
+    } else if(num3 < 0) { // if num is < 0 assign "is negative" to answer3
         answer3 = num3 + " is negative";
-    } else {
+    } else { // assign "is zero" to answer3
         answer3 = num3 + " is zero";
     }
     // --------------------------------------------
@@ -221,8 +223,8 @@ function exercise1(num1) {
     // --------------------------------------------
     // Write your code for the exercise below here:
     // --------------------------------------------
-    if((amount1 > minimum && amount1 < maximum) 
-    && (amount2 > minimum && amount2 < maximum)) {
+    if((amount1 >= minimum && amount1 <= maximum) 
+    && (amount2 >= minimum && amount2 <= maximum)) {
         answer8 = true;
     } else {
         answer8 = false;
