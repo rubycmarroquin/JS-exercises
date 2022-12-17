@@ -16,9 +16,7 @@
 // prependToString('world', 'hello ') // --> 'hello world'
 // prependToString('nothing', '') // --> 'nothing'
 function prependToString (string1, string2) {
-    //concatenate string2 to string1
-    let prepended = string2 + string1;
-    return prepended;
+    return `${string2}${string1}`;
 }
 
 // Exercise 2. Write a function called stringIncludes, which accepts two strings: the first string is a word and the second 
@@ -28,10 +26,10 @@ function prependToString (string1, string2) {
 // Examples:
 // stringIncludes('awesome', 'e'); // --> true
 // stringIncludes('awesome', 'z'); // --> false
-function stringIncludes (string1, string2) {
-    for(let i = 0; i < string1.length; i++) {
-        //if string2 found, return true
-        if(string1[i] === string2) {
+function stringIncludes (word, letter) {
+    for(let i = 0; i < word.length; i++) {
+        //if letter is found, returns true
+        if(word[i] === letter) {
             return true;
         }
     }
@@ -46,16 +44,16 @@ function stringIncludes (string1, string2) {
 // Examples:
 // stringLastIndexOf('awesome', 'e'); // --> 6
 // stringLastIndexOf('awesome', 'z'); // --> -1
-function stringLastIndexOf (string1, string2) {
-    //keeps track of the last index string2 was seen
-    let lastIndexOf = -1;
-    for(let i = 0; i < string1.length; i++) {
-        //if string2 found, update lastIndexOf
-        if(string1[i] === string2) {
-            lastIndexOf = i;
+function stringLastIndexOf (word, letter) {
+    // loop through word starting from the end
+    for(let i = word.length-1; i >= 0; i--) {
+        //if letter is found, return index 
+        if(word[i] === letter) {
+            return i;
         }
     }
-    return lastIndexOf;
+    //if we make it to this point, letter is not in word
+    return -1;
 }
 
 // Exercise 4. Write a function called removeFromString, which accepts a string, a starting index (number) 
@@ -73,7 +71,7 @@ function removeFromString(string, startIndex, numCharsToRemove) {
     for(let i = 0; i < string.length; i++) {
         //if i is not in range of start index and characters to remove, concat to newString
         if(i < startIndex || i >= startIndex + numCharsToRemove) {
-            newString += string[i];
+            newString = `${newString}${string[i]}`
         } 
     }
     return newString;
@@ -90,15 +88,14 @@ function removeFromString(string, startIndex, numCharsToRemove) {
 // let arr3 = [1, 2];
 // indexOf(arr3, 10); // --> -1
 function indexOf(arr, num) {
-    // keep track of the first index num was found 
-    let index = -1;
     for(let i = 0; i < arr.length; i++) {
-        //if num found, update index
+        //if num found, return index 
         if(arr[i] === num) {
-            index = i;
+            return i;
         }
     }
-    return index;
+    // if we make it to this point, num is not in arr
+    return -1;
 }
 
 // Exercise 6. Write a function called includes which accepts a collection, a value, and an optional starting index. 
