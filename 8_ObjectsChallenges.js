@@ -150,7 +150,7 @@ function minMaxKeyInObject(obj) {
     // array that holds the highest and lowest value 
     const minMaxArray = []; 
     // get key values using keys() 
-    const keysArray = keys(obj);x
+    const keysArray = keys(obj);
     // get max and min 
     minMaxArray.push(Math.min.apply(null, keysArray));
     minMaxArray.push(Math.max.apply(null, keysArray));
