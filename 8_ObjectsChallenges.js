@@ -124,16 +124,33 @@ function pluck(arrOfObjs, keyName) {
 function stringFromObject (obj) {
     // string that will hold that generated string from obj
     let string = "";
-    // grab keys and values using keys() and values()
-    const keysArray = keys(obj);
-    const valuesArray = values(obj);
-    for(let i = 0; i < keysArray.length; i++) {
-        // do not format with ", " when the last value/key
-        // else format with ", "
-        string = `${string}${keysArray[i]} = ${valuesArray[i]}${i != keysArray.length-1 ? ", " : ""}`
+    //iterate through object and concat key/values
+    for(p in obj) {
+        string = `${string}${p} = ${obj[p]}, `
     }
-    return string;
+    // remove comma and whitespace from end
+    return `"${string.substring(0, string.length-2)}"`;
 }
+/** 
+ *****************************************************
+ * Another Version of stringFromObject using for in: *
+ *****************************************************
+ */
+
+// function stringFromObject (obj) {
+//     // string that will hold that generated string from obj
+//     let string = "";
+//     // grab keys and values using keys() and values()
+//     const keysArray = keys(obj);
+//     const valuesArray = values(obj);
+//     for(let i = 0; i < keysArray.length; i++) {
+//         // do not format with ", " when the last value/key
+//         // else format with ", "
+//         string = `${string}${keysArray[i]} = ${valuesArray[i]}${i != keysArray.length-1 ? ", " : ""}`
+//     }
+//     return  `"${string}"`;
+// }
+
 /** Test Cases */
 // console.log(stringFromObject({ a: 1, b: '2' }));
 // console.log(stringFromObject([]));
@@ -147,14 +164,8 @@ function stringFromObject (obj) {
 // minMaxKeyInObject({ 1: 'Elie', 4: 'Matt', 2: 'Tim' });
 // [1, 4]
 function minMaxKeyInObject(obj) {
-    // array that holds the highest and lowest value 
-    const minMaxArray = []; 
-    // get key values using keys() 
-    const keysArray = keys(obj);
-    // get max and min 
-    minMaxArray.push(Math.min.apply(null, keysArray));
-    minMaxArray.push(Math.max.apply(null, keysArray));
-    return minMaxArray;
+    // get key values using keys() and grab max and min & return as an array 
+    return [(Math.min.apply(null, keys(obj))), (Math.max.apply(null, keys(obj)))];
 }
 //** Test Cases */
 // console.log( minMaxKeyInObject({ 2: 'a', 7: 'b', 1: 'c', 10: 'd', 4: 'e' }));
