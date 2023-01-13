@@ -16,13 +16,8 @@ delete user.name;
  * true if the object has no properties, false otherwise.
  */
 function isEmpty(obj) {
-    let counter = 0;
-    for(let key in obj) {
-        counter++;
-    }
-    return counter === 0 ? true : false;
+    return Object.keys(obj).length === 0 ? true : false;
 }
-
 // let schedule = {};
 // alert( isEmpty(schedule) ); // true
 // schedule["8:30"] = "get up";
